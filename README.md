@@ -4,7 +4,7 @@ Ding Liu, Shi-Ju Ran, Peter Wittek, Cheng Peng, Raul Blázquez García, Gang Su,
 
 The code uses [tncontract](https://github.com/andrewdarmawan/tncontract) for tensor contractions. Other dependencies are SciPy, Matplotlib, and Scikit-learn.
 
-The data files can be downloaded from [here](whatevercloudfolder).
+The data files can be downloaded from [here]((https://cloud.icfo.es/owncloud/index.php/s/Ks0QhCYTwiqmpSC?path=%2FMNIST%20Data).).
 
 Files
 =====
