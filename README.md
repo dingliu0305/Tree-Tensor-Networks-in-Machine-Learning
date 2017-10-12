@@ -16,5 +16,6 @@ Files
 - `utilities_mnist.py`: Helper functions.
 
 - `TTN_mnist.py`: The main file to train and test the tree tensor network on MNIST.
+- `TTN_tsne.py`: The script to generate the model for t-SNE embedding. 
 
 
