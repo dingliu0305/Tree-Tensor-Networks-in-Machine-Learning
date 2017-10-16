@@ -1,6 +1,6 @@
 This is the computational appendix for the following paper:
 
-Ding Liu, Shi-Ju Ran, Peter Wittek, Cheng Peng, Raul Blázquez García, Gang Su, Maciej Lewenstein. Machine Learning by Two-Dimensional Hierarchical Tensor Networks: A Quantum Information Theoretic Perspective on Deep Architectures. *arXiv:1710.xxxxx*, 2017.
+Ding Liu, Shi-Ju Ran, Peter Wittek, Cheng Peng, Raul Blázquez García, Gang Su, Maciej Lewenstein. [Machine Learning by Two-Dimensional Hierarchical Tensor Networks: A Quantum Information Theoretic Perspective on Deep Architectures](https://arxiv.org/abs/1710.04833). *arXiv:1710.04833*, 2017.
 
 The code uses [tncontract](https://github.com/andrewdarmawan/tncontract) for tensor contractions. Other dependencies are SciPy, Matplotlib, and Scikit-learn.
 
@@ -16,6 +16,6 @@ Files
 - `utilities_mnist.py`: Helper functions.
 
 - `TTN_mnist.py`: The main file to train and test the tree tensor network on MNIST.
-- `TTN_tsne.py`: The script to generate the model for t-SNE embedding. 
+- `TTN_tsne.py`: The script to generate the model for t-SNE embedding.
 
 
