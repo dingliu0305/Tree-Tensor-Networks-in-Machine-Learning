@@ -196,13 +196,16 @@ class TreeTensorNetwork(object):
                                 self.flag_contract[i + 1, j // 2, k // 2] = 0
         if c_i != 4:
 
-            bond = self.contracted[c_i][c_j][c_k].shape[0]
-            tensor_environment = tn.random_tensor(
-                bond, bond, bond, bond, self.bond_inner, labels=['e1', 'e2', 'e3', 'e4', 'eup'])
-            for i, j, k, l, m in product(range(bond), range(bond), range(bond), range(bond), range(self.bond_inner)):
-                sum1 = sum(self.contracted[c_i][c_j][c_k].data[i, j, k, l, g] * self.contracted[4][0][0].data[f, m, g] * self.labels.data[g, f]
-                           for f in range(self.bond_label) for g in range(self.n_train))
-                tensor_environment.data[i, j, k, l, m] = sum1
+            bond = self.contracted[c_i][c_j][c_k].shape[0]             
+                
+            tempD = tn.zeros_tensor([self.bond_inner, self.n_train], labels=['m', 'g'])
+            for m, g in product(range(self.bond_inner), range(self.n_train)):
+                sum1 = 0
+                for f in range(self.bond_label):
+                    sum1 = sum1 + self.contracted[4][0][0].data[f, m, g] * self.labels.data[g, f]
+                tempD.data[m, g] = sum1
+
+            tensor_environment = tn.contract(self.contracted[c_i][c_j][c_k], tempD, ["down"], ["g"])
 
         else:
             tensor_environment = tn.contract(
